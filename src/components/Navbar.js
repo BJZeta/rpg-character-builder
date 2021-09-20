@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <nav>
       <ul>
-        <LinkContainer to="/home">
+        <LinkContainer to="/home/name">
           <li>
             <HiHome /> HOME
           </li>

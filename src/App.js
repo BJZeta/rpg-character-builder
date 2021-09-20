@@ -1,7 +1,5 @@
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
-import StandardPage from "./pages/StandardPage";
-import Navbar from "./components/Navbar";
 import NameScreen from "./screens/NameScreen";
 import RaceScreen from "./screens/Race";
 import ClassScreen from "./screens/ClassScreen";
@@ -15,15 +13,12 @@ function App() {
       <main className="App">
         <Switch>
           <Route path="/" exact component={LandingPage} />
-          <Route path="/home">
-            <Navbar />
-            <Route component={NameScreen} path="/" exact />
-            <Route component={RaceScreen} path="/race" />
-            <Route component={ClassScreen} path="/class" />
-            <Route component={AbilitiesScreen} path="/abilities" />
-            <Route component={DescriptionScreen} path="/home/name" />
-            <Route component={EquipmentScreen} path="/equipment" />
-          </Route>
+          <Route component={NameScreen} path="/home/name" />
+          <Route component={RaceScreen} path="/home/race" />
+          <Route component={ClassScreen} path="/home/class" />
+          <Route component={AbilitiesScreen} path="/home/abilities" />
+          <Route component={DescriptionScreen} path="/home/description" />
+          <Route component={EquipmentScreen} path="/home/equipment" />
         </Switch>
       </main>
     </Router>
