@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import NameScreen from "./screens/NameScreen";
-import RaceScreen from "./screens/Race";
+import RaceScreen from "./screens/RaceScreen";
 import ClassScreen from "./screens/ClassScreen";
 import DescriptionScreen from "./screens/DescriptionScreen";
 import AbilitiesScreen from "./screens/AbilitiesScreen";
