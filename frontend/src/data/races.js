@@ -597,4 +597,51 @@ const races = [
       },
     ],
   },
+  {
+    _id: 6,
+    name: "Half-Orc",
+    details:
+      "Half-orc's grayish pigmentation, sloping foreheads, jutting jaws, prominent teeth, and towering builds make their orcish heritage plain for all to see.",
+    versions: [
+      {
+        race_name: "Half-Orc",
+        racial_traits:
+          "+2 Strength, +1 Constitution, Darkvision, Menacing, Relentless Endurance, Savage Attacks",
+        extra_details: null,
+        stat_bonuses: {
+          strength: 2,
+          dexterity: 0,
+          constitution: 1,
+          intelligence: 0,
+          wisdom: 0,
+          charisma: 2,
+        },
+        racial_bonuses: [
+          {
+            bonus_name: "Darkvision",
+            bonus_details:
+              "Thanks to your orc blood, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.",
+            bonus_choices: null,
+          },
+          {
+            bonus_name: "Menacing",
+            bonus_details: "You gain proficiency in the Intimidation skill.",
+            bonus_choices: null,
+          },
+          {
+            bonus_name: "Relentless Endurance",
+            bonus_details:
+              "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can’t use this feature again until you finish a long rest.",
+            bonus_choices: null,
+          },
+          {
+            bonus_name: "Savage Attacks",
+            bonus_details:
+              "When you score a critical hit with a melee weapon attack, you can roll one of the weapon’s damage dice one additional time and add it to the extra damage of the critical hit.",
+            bonus_choices: null,
+          },
+        ],
+      },
+    ],
+  },
 ];
