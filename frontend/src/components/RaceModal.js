@@ -1,15 +1,48 @@
 import ReactDom from "react-dom";
 import styled from "styled-components";
 
-export default function RaceModal({ open, onClose, race }) {
+export default function RaceModal({ open, onClose, race, icon }) {
   if (!open) return null;
 
-  const { name, speed, ability_bonuses, alignment, languages, traits } = race;
+  const {
+    name,
+    speed,
+    ability_bonuses,
+    alignment,
+    languages,
+    traits,
+    age,
+    size_description,
+  } = race;
 
   return ReactDom.createPortal(
     <>
       <Overlay />
       <Modal>
+        <div className="modal-header">
+          <h3>Confirm Race</h3>
+          <button onClick={onClose}>X</button>
+        </div>
+        <div className="modal-top-section">
+          <div className="text-section">
+            <h3>{name}</h3>
+            <p>{`${alignment} ${age} ${size_description}`}</p>
+          </div>
+          <img src={icon} alt={name} />
+        </div>
+        <div className="racial-traits">
+          <h4>Racial Traits</h4>
+          <p>
+            {ability_bonuses.map((bonus) => {
+              return `${bonus.bonus} ${bonus.ability_score.name} -`;
+            })}
+          </p>
+          <p>
+            {traits.map((trait) => {
+              return `${trait.name} -`;
+            })}
+          </p>
+        </div>
         <h3>{name}</h3>
         <button onClick={onClose}>CANCEL</button>
       </Modal>
@@ -20,10 +53,16 @@ export default function RaceModal({ open, onClose, race }) {
 
 const Modal = styled.div`
   position: fixed;
-  top: 50%;
-  left: 50%;
+  top: 10%;
+  left: 10%;
+  max-width: 550px;
+  max-height: 700px;
   transform: "translate(-50%, -50%)";
   z-index: 1001;
+  background-color: #fff;
+  ::-webkit-scrollbar {
+    width: 20px;
+  }
 `;
 
 const Overlay = styled.div`

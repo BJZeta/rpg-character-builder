@@ -21,7 +21,7 @@ export default function RaceCard({ selectedRace, img }) {
     <Card onClick={() => setIsOpen(!isOpen)}>
       <img src={img} alt={race.name} />
       <h1>{race.name}</h1>
-      <RaceModal onClose={() => setIsOpen(!isOpen)} open={isOpen} race={race} />
+      <RaceModal onClose={() => setIsOpen(!isOpen)} open={isOpen} race={race} icon={img}/>
     </Card>
   );
 }
