@@ -1,20 +1,14 @@
 import ReactDom from "react-dom";
-import TraitDetails from "./TraitDetails";
 import styled from "styled-components";
+import TraitDetails from "./TraitDetails";
 
-export default function RaceModal({ open, onClose, race, icon }) {
+export default function SubraceModal({ open, onClose, race, subrace, icon }) {
   if (!open) return null;
 
-  const {
-    name,
-    speed,
-    ability_bonuses,
-    alignment,
-    languages,
-    traits,
-    age,
-    size_description,
-  } = race;
+  const { name, ability_bonuses, alignment, traits, age, size_description } =
+    race;
+
+  const { racial_traits } = subrace;
 
   return ReactDom.createPortal(
     <>
@@ -26,7 +20,7 @@ export default function RaceModal({ open, onClose, race, icon }) {
         </div>
         <div className="modal-top-section">
           <div className="text-section">
-            <h3>{name}</h3>
+            <h3>{subrace.name}</h3>
             <p>{`${alignment} ${age} ${size_description}`}</p>
           </div>
           <img src={icon} alt={name} />
@@ -35,17 +29,25 @@ export default function RaceModal({ open, onClose, race, icon }) {
           <h4>Racial Traits</h4>
           <p>
             {ability_bonuses.map((bonus) => {
-              return `${bonus.bonus} ${bonus.ability_score.name} -`;
+              return ` - ${bonus.bonus} ${bonus.ability_score.name}`;
             })}
           </p>
           <p>
             {traits.map((trait) => {
-              return `${trait.name} -`;
+              return ` - ${trait.name}`;
+            })}
+          </p>
+          <p>
+            {racial_traits.map((trait) => {
+              return ` - ${trait.name}`;
             })}
           </p>
         </div>
         <section>
           {traits.map((trait) => {
+            return <TraitDetails trait_name={trait.index} />;
+          })}
+          {racial_traits.map((trait) => {
             return <TraitDetails trait_name={trait.index} />;
           })}
         </section>

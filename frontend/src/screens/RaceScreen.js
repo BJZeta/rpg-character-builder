@@ -15,7 +15,7 @@ export default function RaceScreen() {
       <h1>Race Screen</h1>
       <section>
         <RaceCard selectedRace="dragonborn" img={dragonborn} icon={dragonborn} />
-        <SubraceCard selectedRace="high-elf" img={high_elf} />
+        <SubraceCard selectedRace="elf" selectedSubrace="high-elf"  img={high_elf} />
         <RaceCard selectedRace="half-elf" img={half_elf} />
         <RaceCard selectedRace="half-orc" img={half_orc} />
         <RaceCard selectedRace="human" img={human} />
