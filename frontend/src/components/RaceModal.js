@@ -22,7 +22,10 @@ export default function RaceModal({ open, onClose, race, icon }) {
       <Modal>
         <div className="modal-header">
           <h3>Confirm Race</h3>
-          <button onClick={onClose}>X</button>
+          <Buttons>
+          <button onClick={onClose}>SELECT</button>
+          <button onClick={onClose}>CANCEL</button>
+        </Buttons>
         </div>
         <div className="modal-top-section">
           <div className="text-section">
@@ -49,7 +52,7 @@ export default function RaceModal({ open, onClose, race, icon }) {
             return <TraitDetails trait_name={trait.index} />;
           })}
         </section>
-        <button onClick={onClose}>CANCEL</button>
+        
       </Modal>
     </>,
     document.getElementById("portal")
@@ -76,4 +79,7 @@ const Overlay = styled.div`
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 1000;
+`;
+
+const Buttons = styled.div`
 `;

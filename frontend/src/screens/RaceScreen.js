@@ -1,4 +1,3 @@
-import Navbar from "../components/Navbar";
 import RaceCard from "../components/RaceCard";
 import dragonborn from "../assets/dragonborn.jpeg";
 import half_elf from "../assets/half-elf.jpeg";
@@ -11,7 +10,6 @@ import SubraceCard from "../components/SubraceCard";
 export default function RaceScreen() {
   return (
     <div>
-      <Navbar />
       <h1>Race Screen</h1>
       <section>
         <RaceCard selectedRace="dragonborn" img={dragonborn} icon={dragonborn} />

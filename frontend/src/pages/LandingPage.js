@@ -15,24 +15,7 @@ export default function LandingPage() {
               approach.
             </p>
           </button>
-        </LinkContainer>
-        <LinkContainer to="/quick-build">
-          <button>
-            <h3>Quick Build</h3>
-            <p>
-              Create a 1st-level character using recommended starting options.
-            </p>
-          </button>
-        </LinkContainer>
-        <LinkContainer to="/randomize">
-          <button>
-            <h3>Randomize</h3>
-            <p>
-              Create a character of any level with random statistics by setting
-              parameters.
-            </p>
-          </button>
-        </LinkContainer>
+        </LinkContainer>      
       </section>
     </Landing>
   );
