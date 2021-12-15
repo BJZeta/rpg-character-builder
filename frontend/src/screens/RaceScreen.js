@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
-import { BsFillArrowLeftSquareFill, BsFillArrowRightSquareFill } from "react-icons/bs";
+import {
+  BsFillArrowLeftSquareFill,
+  BsFillArrowRightSquareFill,
+} from "react-icons/bs";
 import styled from "styled-components";
 import RaceCard from "../components/RaceCard";
 import dragonborn from "../assets/dragonborn.jpeg";
@@ -11,6 +14,7 @@ import high_elf from "../assets/high-elf.jpeg";
 import SubraceCard from "../components/SubraceCard";
 
 export default function RaceScreen() {
+
   return (
     <RaceLayout>
       <Link to="/home/name">

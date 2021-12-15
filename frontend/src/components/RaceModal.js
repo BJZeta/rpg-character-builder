@@ -1,9 +1,11 @@
 import ReactDom from "react-dom";
+import { useHistory } from "react-router-dom";
 import TraitDetails from "./TraitDetails";
 import styled from "styled-components";
+import AbilitiesScreen from "../screens/AbilitiesScreen";
 
-export default function RaceModal({ open, onClose, race, icon }) {
-  if (!open) return null;
+export default function RaceModal({ open, onClose, race, icon, onSelectRace }) {
+  if (!open) return null
 
   const {
     name,
@@ -23,9 +25,9 @@ export default function RaceModal({ open, onClose, race, icon }) {
         <div className="modal-header">
           <h3>Confirm Race</h3>
           <Buttons>
-          <button onClick={onClose}>SELECT</button>
-          <button onClick={onClose}>CANCEL</button>
-        </Buttons>
+            <button onClick={onSelectRace}>SELECT</button>
+            <button onClick={onClose}>CANCEL</button>
+          </Buttons>
         </div>
         <div className="modal-top-section">
           <div className="text-section">
@@ -52,7 +54,6 @@ export default function RaceModal({ open, onClose, race, icon }) {
             return <TraitDetails trait_name={trait.index} />;
           })}
         </section>
-        
       </Modal>
     </>,
     document.getElementById("portal")
@@ -81,5 +82,4 @@ const Overlay = styled.div`
   z-index: 1000;
 `;
 
-const Buttons = styled.div`
-`;
+const Buttons = styled.div``;
