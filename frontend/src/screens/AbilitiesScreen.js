@@ -3,7 +3,7 @@ import { useEffect } from "react";
 
 export default function AbilitiesScreen() {
   useEffect(() => {
-    const checkRace = localStorage.getItem("race");
+    const checkRace = localStorage.getItem("selectedRace");
 
     if (checkRace) {
       console.log("selected race");

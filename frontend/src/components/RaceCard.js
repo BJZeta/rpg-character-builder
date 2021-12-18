@@ -11,6 +11,7 @@ export default function RaceCard({ selectedRace, img }) {
   let history = useHistory();
 
   const handleSelectedRace = (selectedRace) => {
+    localStorage.setItem("selectedRace", JSON.stringify(selectedRace));
     console.log(JSON.stringify(selectedRace));
     history.push("/home/abilities");
   };
