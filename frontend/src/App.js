@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import LandingPage from "./pages/LandingPage";
+import LandingScreen from "./screens/LandingScreen";
 import NameScreen from "./screens/NameScreen";
 import RaceScreen from "./screens/RaceScreen";
 import ClassScreen from "./screens/ClassScreen";
@@ -12,7 +12,7 @@ function App() {
     <Router>
       <main className="App">
         <Switch>
-          <Route path="/" exact component={LandingPage} />
+          <Route path="/" exact component={LandingScreen} />
           <Route component={NameScreen} path="/home/name" />
           <Route component={RaceScreen} path="/home/race" />
           <Route component={ClassScreen} path="/home/class" />

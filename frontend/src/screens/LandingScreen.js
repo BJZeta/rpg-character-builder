@@ -1,7 +1,7 @@
 import { LinkContainer } from "react-router-bootstrap";
 import styled from "styled-components";
 
-export default function LandingPage() {
+export default function LandingScreen() {
   return (
     <Landing>
       <h1>Character Creation Method</h1>
